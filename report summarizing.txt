@@ -1,0 +1,28 @@
+### Key Findings from Data Analysis
+
+1. **Data Overview**:
+
+- The dataset comprises data  employee salaries, including 148,654 rows and 13 columns.
+- Key columns include 'EmployeeName', 'JobTitle', 'BasePay', 'OvertimePay', 'OtherPay', 'Benefits', and 'TotalPay'.
+- There were significant missing values in 'BasePay', 'OvertimePay', 'OtherPay', and especially in 'Benefits', as well as complete absence of data in 'Notes' and 'Status'.
+
+2. **Salary Analysis**:
+
+- The mean salary (TotalPay) for the dataset is approximately $74,768.
+- The median salary is around $71,427, indicating a distribution that's slightly right-skewed.
+- The range of salaries is vast, from -$618.13 to $567,595.43, indicating a wide disparity in employee compensation.
+- The standard deviation of salaries is about $50,517, suggesting a high variation in pay.
+
+3. **Cleaning and Handling Missing Data**:
+ - We dealt with missing values in 'BasePay', 'OvertimePay', and 'OtherPay' through imputation. For 'BasePay', we used the mean due to its moderate skewness, while for 'OvertimePay' and 'OtherPay,' we opted for the median because of their right-skewed distribution.
+
+ - Missing values in 'Benefits' were filled with zero, assuming that absence implies no benefits.
+ - We removed 'Notes' and 'Status' columns as they contained no valuable information.
+
+4. **Analyzing by Job Title and Year**:
+ - Grouping the data by 'JobTitle' revealed significant variations in salaries, reflecting the diversity of roles and hierarchies.
+ - Examining different years showed a general salary increase from 2011 to 2013, with a slight dip in 2014.
+
+5. **Correlation Insights**:
+ - We found a strong positive correlation of 0.95 between 'TotalPay' and 'BasePay,' highlighting the crucial role of BasePay in determining Total Pay.
+ - Moderate correlations were observed between 'TotalPay' and 'OvertimePay' (0.50), 'OtherPay' (0.47), and 'Benefits' (0.63), indicating their contributions to total compensation, though less significant compared to BasePay.
